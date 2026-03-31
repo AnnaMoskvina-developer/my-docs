@@ -1,16 +1,33 @@
-# Моя документация
+# Документация VK WorkSpace (демо-проект)
 
-Этот репозиторий создан в рамках подготовки к позиции технического писателя в VK Tech.
+Демонстрационный проект для позиции **технического писателя**.  
+Показывает реальное применение подхода **Docs as Code**.
 
-## Используемые технологии
+- 🌐 **Сайт документации:**  
+  [annamoskvina-developer.github.io/my-docs](https://annamoskvina-developer.github.io/my-docs/)
 
-- **Git** — контроль версий
-- **Markdown** — написание документации
-- **MkDocs** — сборка статического сайта
+- 📂 **Исходный код:**  
+  [github.com/AnnaMoskvina-developer/my-docs](https://github.com/AnnaMoskvina-developer/my-docs)
 
-## Как посмотреть документацию локально
+---
+
+## 🛠 Стек
+
+| Инструмент | Назначение |
+|------------|------------|
+| Markdown | Написание документации |
+| Git / GitHub | Контроль версий, CI/CD, хостинг |
+| MkDocs + Material | Генератор статического сайта и тема |
+| GitHub Actions | Автоматическая сборка и деплой |
+| GitHub Pages | Публикация готового сайта |
+
+---
+
+## 🚀 Локальный запуск
 
 ```bash
 git clone https://github.com/AnnaMoskvina-developer/my-docs.git
 cd my-docs
+pip install mkdocs-material
 mkdocs serve
+Открыть http://127.0.0.1:8000

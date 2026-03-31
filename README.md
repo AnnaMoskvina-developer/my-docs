@@ -30,4 +30,6 @@ git clone https://github.com/AnnaMoskvina-developer/my-docs.git
 cd my-docs
 pip install mkdocs-material
 mkdocs serve
-Открыть http://127.0.0.1:8000
+```
+После этого откройте браузер и перейдите по адресу:
+http://127.0.0.1:8000

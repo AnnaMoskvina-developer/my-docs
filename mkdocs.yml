@@ -1,0 +1,11 @@
+site_name: Моя документация
+theme:
+  name: material
+nav:
+  - Главная: index.md
+  - Продвинутый пример: advanced-example.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

@@ -4,22 +4,36 @@
 Показывает реальное применение подхода **Docs as Code**.
 
 - 🌐 **Сайт документации:**  
-  [annamoskvina-developer.github.io/my-docs](https://annamoskvina-developer.github.io/my-docs/)
+  https://annamoskvina-developer.github.io/my-docs/
 
 - 📂 **Исходный код:**  
-  [github.com/AnnaMoskvina-developer/my-docs](https://github.com/AnnaMoskvina-developer/my-docs)
+  https://github.com/AnnaMoskvina-developer/my-docs
 
 ---
 
-## 🛠 Стек
+## 🛠 Используемые технологии
 
 | Инструмент | Назначение |
 |------------|------------|
 | Markdown | Написание документации |
 | Git / GitHub | Контроль версий, CI/CD, хостинг |
 | MkDocs + Material | Генератор статического сайта и тема |
+| Mermaid | Текстовые диаграммы (архитектура, flowchart, sequence) |
 | GitHub Actions | Автоматическая сборка и деплой |
 | GitHub Pages | Публикация готового сайта |
+
+---
+
+## 📊 Диаграммы
+
+В проекте используются **Mermaid** — текстовый формат диаграмм, который позволяет хранить схемы в Git вместе с документацией.
+
+| Тип | Описание | Ссылка |
+|-----|----------|--------|
+| **Архитектура** | Взаимодействие пользователя с сервисами | [посмотреть](https://annamoskvina-developer.github.io/my-docs/advanced-example/#architecture) |
+| **Flowchart** | Процесс авторизации | [посмотреть](https://annamoskvina-developer.github.io/my-docs/advanced-example/#flowchart) |
+| **Sequence diagram** | Отправка сообщения | [посмотреть](https://annamoskvina-developer.github.io/my-docs/advanced-example/#sequence) |
+| **C4 Context** | Контекстная диаграмма системы | [посмотреть](https://annamoskvina-developer.github.io/my-docs/advanced-example/#c4-context-системный-контекст) |
 
 ---
 

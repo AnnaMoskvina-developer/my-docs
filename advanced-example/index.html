@@ -368,6 +368,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Диаграмма архитектуры
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flowchart (блок-схема процесса)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequence diagram (диаграмма последовательности)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c4-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C4 Context (системный контекст):
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -490,6 +534,50 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Диаграмма архитектуры
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flowchart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flowchart (блок-схема процесса)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sequence diagram (диаграмма последовательности)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c4-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C4 Context (системный контекст):
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -602,6 +690,91 @@
 <p>Вот пример того, как вставлять изображения в документацию:</p>
 <p><img alt="Скриншот документации" src="../images/imageforme.png" width="400" /></p>
 <p><em>Рисунок 1 — Пример оформления документации (ширина 400px)</em></p>
+<hr />
+<h2 id="architecture">Диаграмма архитектуры</h2>
+<p>Ниже показана примерная архитектура взаимодействия компонентов в корпоративном сервисе (на основе VK WorkSpace):</p>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[Пользователь] --&gt; B[Мессенджер]
+    A --&gt; C[Почта]
+    A --&gt; D[Календарь]
+    A --&gt; E[Облачное хранилище]
+
+    B --&gt; F[API Gateway]
+    C --&gt; F
+    D --&gt; F
+    E --&gt; F
+
+    F --&gt; G[Сервис аутентификации]
+    F --&gt; H[Сервис уведомлений]
+    F --&gt; I[Сервис документов]
+
+    G --&gt; J[База данных пользователей]
+    I --&gt; K[Редактор документов]
+</code></pre></div>
+<hr />
+<h2 id="flowchart">Flowchart (блок-схема процесса)</h2>
+<p>Ниже показан процесс авторизации пользователя в системе:</p>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[Пользователь открывает приложение] --&gt; B{Есть активная сессия?}
+    B --&gt;|Да| C[Доступ разрешён]
+    B --&gt;|Нет| D[Показать форму входа]
+    D --&gt; E[Пользователь вводит логин и пароль]
+    E --&gt; F{Данные верны?}
+    F --&gt;|Да| G[Создать сессию]
+    G --&gt; C
+    F --&gt;|Нет| H[Показать ошибку]
+    H --&gt; D
+    C --&gt; I[Работа с системой]
+</code></pre></div>
+<hr />
+<h2 id="sequence">Sequence diagram (диаграмма последовательности)</h2>
+<p>Диаграмма показывает порядок взаимодействия при отправке сообщения в мессенджере:</p>
+<div class="highlight"><pre><span></span><code>sequenceDiagram
+    participant U as Пользователь
+    participant F as Фронтенд
+    participant API as API Gateway
+    participant A as Auth Service
+    participant M as Messenger Service
+    participant DB as База данных
+
+    U-&gt;&gt;F: Написать сообщение
+    F-&gt;&gt;API: POST /message
+    API-&gt;&gt;A: Проверить токен
+    A--&gt;&gt;API: Токен валиден
+    API-&gt;&gt;M: Отправить сообщение
+    M-&gt;&gt;DB: Сохранить сообщение
+    DB--&gt;&gt;M: Подтверждение
+    M--&gt;&gt;API: Сообщение доставлено
+    API--&gt;&gt;F: Статус 200
+    F--&gt;&gt;U: Сообщение отправлено ✓
+</code></pre></div>
+<hr />
+<h2 id="c4-context">C4 Context (системный контекст):</h2>
+<p>Контекстная диаграмма показывает, как пользователи взаимодействуют с системой VK WorkSpace и какие внешние системы задействованы.</p>
+<div class="highlight"><pre><span></span><code>flowchart TB
+    User[&lt;b&gt;👤 Пользователь&lt;/b&gt;&lt;br/&gt;Сотрудник компании]
+
+    subgraph VKWS [&lt;b&gt;VK WorkSpace&lt;/b&gt;]
+        direction LR
+        Platform[Платформа&lt;br/&gt;корпоративных&lt;br/&gt;коммуникаций]
+    end
+
+    subgraph External [&lt;b&gt;Внешние системы&lt;/b&gt;]
+        Mail[&lt;b&gt;📧 Корпоративная почта&lt;/b&gt;&lt;br/&gt;Exchange / Gmail]
+        Storage[&lt;b&gt;☁️ Файловое хранилище&lt;/b&gt;&lt;br/&gt;S3 / SharePoint]
+    end
+
+    User --&gt;|Использует| Platform
+    Platform --&gt;|Отправляет письма| Mail
+    Platform --&gt;|Синхронизирует файлы| Storage
+
+    style User fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style VKWS fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style Platform fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style External fill:#fff8e1,stroke:#ff8f00,stroke-width:2px
+    style Mail fill:#fff8e1,stroke:#ff8f00,stroke-width:2px
+    style Storage fill:#fff8e1,stroke:#ff8f00,stroke-width:2px
+</code></pre></div>
 <div class="footnote">
 <hr />
 <ol>

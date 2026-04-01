@@ -1,13 +1,25 @@
-# Документация VK WorkSpace (демо-проект)
+# Документация VK WorkSpace (демонстрационный проект)
 
 Демонстрационный проект для позиции **технического писателя**.  
 Показывает реальное применение подхода **Docs as Code**.
 
-- 🌐 **Сайт документации:**  
-  https://annamoskvina-developer.github.io/my-docs/
+---
 
-- 📂 **Исходный код:**  
-  https://github.com/AnnaMoskvina-developer/my-docs
+## 📂 Исходный код
+
+Репозиторий с документацией и историей изменений:  
+[https://github.com/AnnaMoskvina-developer/my-docs](https://github.com/AnnaMoskvina-developer/my-docs)
+
+---
+
+## 🌐 Готовый сайт
+
+Сайт собран из Markdown с помощью MkDocs и доступен на двух площадках:
+
+| Площадка | Адрес | Назначение |
+|----------|-------|------------|
+| **GitHub Pages** | [annamoskvina-developer.github.io/my-docs](https://annamoskvina-developer.github.io/my-docs/) | Основной, автоматическая сборка через GitHub Actions |
+| **Yandex Cloud** | [annamoskvina-docs.website.yandexcloud.net](https://annamoskvina-docs.website.yandexcloud.net) | Зеркало для стабильного доступа из России |
 
 ---
 
@@ -16,11 +28,11 @@
 | Инструмент | Назначение |
 |------------|------------|
 | Markdown | Написание документации |
-| Git / GitHub | Контроль версий, CI/CD, хостинг |
-| MkDocs + Material | Генератор статического сайта и тема |
+| Git / GitHub | Контроль версий, CI/CD, хостинг кода |
+| MkDocs + Material | Генератор статического сайта и тема оформления |
 | Mermaid | Текстовые диаграммы (архитектура, flowchart, sequence) |
-| GitHub Actions | Автоматическая сборка и деплой |
-| GitHub Pages | Публикация готового сайта |
+| GitHub Actions | Автоматическая сборка и публикация на GitHub Pages |
+| Yandex Cloud | Зеркало сайта для стабильного доступа из РФ |
 
 ---
 
@@ -34,6 +46,8 @@
 | **Flowchart** | Процесс авторизации | [посмотреть](https://annamoskvina-developer.github.io/my-docs/advanced-example/#flowchart) |
 | **Sequence diagram** | Отправка сообщения | [посмотреть](https://annamoskvina-developer.github.io/my-docs/advanced-example/#sequence) |
 | **C4 Context** | Контекстная диаграмма системы | [посмотреть](https://annamoskvina-developer.github.io/my-docs/advanced-example/#c4-context-системный-контекст) |
+
+Все диаграммы написаны в формате Mermaid, хранятся в Git и автоматически рендерятся на сайте.
 
 ---
 

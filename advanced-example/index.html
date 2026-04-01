@@ -693,7 +693,7 @@
 <hr />
 <h2 id="architecture">Диаграмма архитектуры</h2>
 <p>Ниже показана примерная архитектура взаимодействия компонентов в корпоративном сервисе (на основе VK WorkSpace):</p>
-<div class="highlight"><pre><span></span><code>graph TD
+<pre class="mermaid"><code>graph TD
     A[Пользователь] --&gt; B[Мессенджер]
     A --&gt; C[Почта]
     A --&gt; D[Календарь]
@@ -709,12 +709,11 @@
     F --&gt; I[Сервис документов]
 
     G --&gt; J[База данных пользователей]
-    I --&gt; K[Редактор документов]
-</code></pre></div>
+    I --&gt; K[Редактор документов]</code></pre>
 <hr />
 <h2 id="flowchart">Flowchart (блок-схема процесса)</h2>
 <p>Ниже показан процесс авторизации пользователя в системе:</p>
-<div class="highlight"><pre><span></span><code>flowchart TD
+<pre class="mermaid"><code>flowchart TD
     A[Пользователь открывает приложение] --&gt; B{Есть активная сессия?}
     B --&gt;|Да| C[Доступ разрешён]
     B --&gt;|Нет| D[Показать форму входа]
@@ -724,12 +723,11 @@
     G --&gt; C
     F --&gt;|Нет| H[Показать ошибку]
     H --&gt; D
-    C --&gt; I[Работа с системой]
-</code></pre></div>
+    C --&gt; I[Работа с системой]</code></pre>
 <hr />
 <h2 id="sequence">Sequence diagram (диаграмма последовательности)</h2>
 <p>Диаграмма показывает порядок взаимодействия при отправке сообщения в мессенджере:</p>
-<div class="highlight"><pre><span></span><code>sequenceDiagram
+<pre class="mermaid"><code>sequenceDiagram
     participant U as Пользователь
     participant F as Фронтенд
     participant API as API Gateway
@@ -746,12 +744,11 @@
     DB--&gt;&gt;M: Подтверждение
     M--&gt;&gt;API: Сообщение доставлено
     API--&gt;&gt;F: Статус 200
-    F--&gt;&gt;U: Сообщение отправлено ✓
-</code></pre></div>
+    F--&gt;&gt;U: Сообщение отправлено ✓</code></pre>
 <hr />
 <h2 id="c4-context">C4 Context (системный контекст):</h2>
 <p>Контекстная диаграмма показывает, как пользователи взаимодействуют с системой VK WorkSpace и какие внешние системы задействованы.</p>
-<div class="highlight"><pre><span></span><code>flowchart TB
+<pre class="mermaid"><code>flowchart TB
     User[&lt;b&gt;👤 Пользователь&lt;/b&gt;&lt;br/&gt;Сотрудник компании]
 
     subgraph VKWS [&lt;b&gt;VK WorkSpace&lt;/b&gt;]
@@ -773,8 +770,7 @@
     style Platform fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
     style External fill:#fff8e1,stroke:#ff8f00,stroke-width:2px
     style Mail fill:#fff8e1,stroke:#ff8f00,stroke-width:2px
-    style Storage fill:#fff8e1,stroke:#ff8f00,stroke-width:2px
-</code></pre></div>
+    style Storage fill:#fff8e1,stroke:#ff8f00,stroke-width:2px</code></pre>
 <div class="footnote">
 <hr />
 <ol>

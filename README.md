@@ -7,14 +7,14 @@
 
 ## 📂 Исходный код
 
-Репозиторий с документацией и историей изменений:  
-[https://github.com/AnnaMoskvina-developer/my-docs](https://github.com/AnnaMoskvina-developer/my-docs)
+| Платформа | Адрес | Назначение |
+|-----------|-------|------------|
+| **GitHub** | [github.com/AnnaMoskvina-developer/my-docs](https://github.com/AnnaMoskvina-developer/my-docs) | Основной репозиторий, CI/CD, история изменений |
+| **Mos.Hub** | [hub.mos.ru/ann-moskvina2008/my-docs](https://hub.mos.ru/ann-moskvina2008/my-docs) | Зеркало для доступа из России (код) |
 
 ---
 
 ## 🌐 Готовый сайт
-
-Сайт собран из Markdown с помощью MkDocs и доступен на двух площадках:
 
 | Площадка | Адрес | Назначение |
 |----------|-------|------------|
@@ -33,6 +33,7 @@
 | Mermaid | Текстовые диаграммы (архитектура, flowchart, sequence) |
 | GitHub Actions | Автоматическая сборка и публикация на GitHub Pages |
 | Yandex Cloud | Зеркало сайта для стабильного доступа из РФ |
+| Mos.Hub | Зеркало репозитория для доступа из РФ |
 
 ---
 
